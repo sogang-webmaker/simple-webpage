@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+	<style>
+	*{
+         -moz-box-sizing:border-box;
+     }
+	.container{
+		border:1px solid black; 
+		padding:100px;
+		background-color:#000000;
+        width:1050px;
+        text-align: center;
+	}
+    header{
+    	border-bottom : 1px solid gray;
+    	text-align:center;
+    	background-color:#FFFFFF;
+    	width:800px;
+    }
+    article{
+        float:left; 
+        border-left:1px solid gray;  
+        border-right:1px solid gray;
+        height:600px;
+        margin:1px;
+        width:800px;
+        background-color:#FFFFFF;
+    }
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+		<h1>
+			for title.
+		</h1>
+		</header>
+		<article>
+			<h1>{{post.title}}</h1>
+            <h2>{{post.author}}</h2>
+            <p>{{post.text}}</p>
+		</article>
+		<footer>
+			for bottmo
+		</footer>
+		
+	</div>
+</body>

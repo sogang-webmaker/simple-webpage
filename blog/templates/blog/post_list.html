@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+	<style>
+	*{
+         -moz-box-sizing:border-box;
+     }
+	.container{
+		border:1px solid black; 
+		padding:100px;
+		background-color:#000000;
+        width:1050px;
+        text-align: center;
+	}
+    header{
+    	border-bottom : 1px solid gray;
+    	text-align:center;
+    	background-color:#FFFFFF;
+    	width:800px;
+    }
+    nav{
+        float:left;
+        margin:1px;
+        width:200px;
+        height:600px;
+        background-color:#FFFFFF;
+    }
+    article{
+        float:left; 
+        border-left:1px solid gray;  
+        border-right:1px solid gray;
+        height:600px;
+        margin:1px;
+        width:400px;
+        background-color:#FFFFFF;
+    }
+    aside{
+        float:left;
+        margin:1px;
+        width:200px;
+        height:600px;
+        background-color:#FFFFFF;
+    }
+    footer{
+        clear:both;
+        border-top:1px solid gray;
+        text-align: center;
+        padding:20px;
+        background-color:#FFFFFF;
+        width:800px;
+    }
+    #post{
+        padding:5;
+        background-color:#00CFCF;
+    }
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+		<h1>
+			for title.
+		</h1>
+		</header>
+		<nav>
+			<ul>
+				<li>you can see youer profile on the pasge</li>
+				<li>you can see the list at middle</li>
+				<li>... anything else</li>
+			<ul>
+		</nav>
+		<article>
+			{% for post in posts %}
+                <p id="post">
+                    author : {{post.author}} 
+                    <h1>
+                        <a href="/post/{{post.pk}}">
+                            title : {{post.title}}
+                        </a>
+                    </h1>
+                </p>
+            {% endfor %}
+		</article>
+		<aside>
+			for advertisement.
+		</aside>
+		<footer>
+			for bottmo
+		</footer>
+		
+	</div>
+</body>
